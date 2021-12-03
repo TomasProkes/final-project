@@ -148,7 +148,7 @@ body {
 .glide {
 
 &__section {
-  width: 800px;
+  width: 500px;
   }
 
 &__slide img {
@@ -165,10 +165,13 @@ body {
   bottom: 3.5%;
   right: 10%;
   color: white;
-  font-size: 45px;
+  font-size: 28px;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 10px;
   text-align: center;
   }
-
+  // &__next-to {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
 }
