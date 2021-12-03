@@ -145,27 +145,30 @@ body {
     margin: 5px;
 }
 
-.glide__slide img {
+.glide {
+
+&__section {
+  width: 800px;
+  }
+
+&__slide img {
   width: 100%;
-  opacity: 60%;
-  /* height: 800px; */
 }
 
-.glide__section {
-width: 800px;
-}
+&__slide {
+  position: relative;
+  }
 
-.glide__desc {
+&__desc {
   position: absolute;
   left: 10%;
-  bottom: 5%;
+  bottom: 3.5%;
   right: 10%;
-  color: black;
-  font-size: 50px;
+  color: white;
+  font-size: 45px;
   background-color: rgba(0, 0, 0, 0.3);
-}
+  padding: 10px;
+  text-align: center;
+  }
 
-.glide__slide {
-  position: relative;
- 
- }
+}

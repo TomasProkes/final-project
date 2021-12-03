@@ -113,26 +113,23 @@ body {
   margin: 5px;
 }
 
-.glide__slide img {
-  width: 100%;
-  opacity: 60%;
-  /* height: 800px; */
-}
-
 .glide__section {
   width: 800px;
 }
-
+.glide__slide img {
+  width: 100%;
+}
+.glide__slide {
+  position: relative;
+}
 .glide__desc {
   position: absolute;
   left: 10%;
-  bottom: 5%;
+  bottom: 3.5%;
   right: 10%;
-  color: black;
-  font-size: 50px;
+  color: white;
+  font-size: 45px;
   background-color: rgba(0, 0, 0, 0.3);
-}
-
-.glide__slide {
-  position: relative;
+  padding: 10px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
