@@ -34,12 +34,12 @@ body {
   &__logo {
     display: flex;
     margin: 0;
-    padding: 5px;
-    width: 200px;
+    // width: 350px;
+    
   }
 
   &__svg-book {
-    max-width: 60%;
+    max-width: 100%;
   }
 
   &__h1 {
@@ -139,8 +139,33 @@ body {
 }
 
 .upper__image {
-	min-height: 200px;
+	min-height: 185px;
 	background: url(../images/never-stop-learning.jpg) no-repeat right center/cover;
     border-radius: 7px;
     margin: 5px;
 }
+
+.glide__slide img {
+  width: 100%;
+  opacity: 60%;
+  /* height: 800px; */
+}
+
+.glide__section {
+width: 800px;
+}
+
+.glide__desc {
+  position: absolute;
+  left: 10%;
+  bottom: 5%;
+  right: 10%;
+  color: black;
+  font-size: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.glide__slide {
+  position: relative;
+ 
+ }
