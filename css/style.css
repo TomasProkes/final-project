@@ -111,13 +111,24 @@ body {
   background: url(../images/never-stop-learning.jpg) no-repeat right center/cover;
   border-radius: 7px;
   margin: 5px;
+  margin-bottom: 10px;
 }
 
+.glide__right {
+  width: 515px;
+}
+.glide__next-to {
+  width: 510px;
+  padding: 0 0 0 10px;
+}
 .glide__section {
-  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1;
 }
 .glide__slide img {
   width: 100%;
+  border-radius: 7px;
 }
 .glide__slide {
   position: relative;
