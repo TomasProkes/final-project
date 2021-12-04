@@ -1,6 +1,6 @@
-$primary: rgb(6, 6, 160);
+$primary: #0d47a1;
 $secondary: #2f80ed;
-$third: yellow;
+$third: white;
 
 $font-main-text: "Cairo", sans-serif;
 
@@ -27,13 +27,25 @@ body {
 
 h2 {
   color: $primary;
+  font-size: 30px;
 }
+
+h3 {
+  font-size: 20px;
+  margin: 0;
+  background-color: $primary;
+  color: $third;
+}
+// .header__whole {
+//   position: fixed;
+// }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  
 
   &__logo {
     display: flex;
@@ -84,7 +96,7 @@ h2 {
     transition: 0.5s;
     background-size: 200% auto;
     text-decoration: none;
-    color: white;
+    color: $third;
     box-shadow: 0 0 20px #eee;
     border-radius: 7px;
     display: block;
@@ -111,7 +123,7 @@ h2 {
     transition: 0.5s;
     background-size: 200% auto;
     text-decoration: none;
-    color: white;
+    color: $third;
     box-shadow: 0 0 20px #eee;
     border-radius: 7px;
     display: block;
@@ -177,12 +189,66 @@ h2 {
     left: 10%;
     bottom: 5%;
     right: 10%;
-    color: white;
+    color: $third;
     font-size: 28px;
     background-color: rgba(0, 0, 0, 0.3);
     padding: 10px;
     text-align: center;
   }
+}
+
+.offer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1;
+  margin-bottom: $margin-bottom;
+ gap: 10px;
+  text-align: center;
+
+  &__link-upper {
+    color: $third;
+    text-decoration: none;
+  }
+
+  &__link-upper:hover {
+    color: $secondary;
+    
+  }
+
+  &__button {
+    
+    background-image: linear-gradient(
+      to right,
+      #56ccf2 0%,
+      #2f80ed 51%,
+      #56ccf2 100%
+    );
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-decoration: none;
+    color: $third;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 7px;
+    display: block;
+  }
+
+  &__button:hover {
+    background-position: right center;
+    color: $primary;
+    text-decoration: none;
+  }  
+
+
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  margin: 30px 10px 10px 10px;
+
 }
 
 .footer {
@@ -203,14 +269,14 @@ h2 {
     width: 80px;
     line-height: 15px;
     text-align: center;
-    color: white;
+    color: $third;
   }
 
   &__link {
     text-decoration: none;
   }
   a {
-    color: white;
+    color: $third;
   }
 
   & a:hover,
@@ -218,3 +284,4 @@ h2 {
     color: $primary;
   }
 }
+
