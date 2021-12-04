@@ -18,13 +18,15 @@ html {
 }
 
 body {
- 
   margin: 20px auto;
   font-family: $font-main-text;
   font-size: 16px;
-  background-color: #F5F3F4;
+  background-color: #f5f3f4;
   width: 1040px;
-  
+}
+
+h2 {
+  color: $primary;
 }
 
 .header {
@@ -36,8 +38,6 @@ body {
   &__logo {
     display: flex;
     margin: 0;
-    // width: 350px;
-    
   }
 
   &__svg-book {
@@ -75,7 +75,7 @@ body {
     background-image: linear-gradient(
       to right,
       #56ccf2 0%,
-      #0D47A1 25%,
+      #0d47a1 25%,
       #56ccf2 100%
     );
     margin: 5px;
@@ -91,15 +91,12 @@ body {
   }
   &__link:hover {
     background-position: right center;
-    color: black;
+    color: $primary;
     text-decoration: none;
   }
- 
-  
-
 }
 .menu {
-    margin-bottom: $margin-bottom;
+  margin-bottom: $margin-bottom;
 
   &__link {
     background-image: linear-gradient(
@@ -122,7 +119,7 @@ body {
 
   &__link:hover {
     background-position: right center;
-    color: black;
+    color: $primary;
     text-decoration: none;
   }
 
@@ -141,49 +138,83 @@ body {
 }
 
 .upper__image {
-	min-height: 185px;
-	background: url(../images/never-stop-learning.jpg) no-repeat right center/cover;
-    border-radius: 7px;
-    margin: 5px;
-    margin-bottom: $margin-bottom;
+  min-height: 185px;
+  background: url(../images/never-stop-learning.jpg) no-repeat right
+    center/cover;
+  border-radius: 7px;
+  margin: 5px;
+  margin-bottom: $margin-bottom;
 }
 
 .glide {
-
   &__right {
     width: 515px;
   }
-&__next-to {
-  width: 510px;
-  padding: 0 0 0 10px;
-}
+  &__next-to {
+    width: 510px;
+    padding: 0 0 0 10px;
+    align-self: center;
+  }
 
-&__section {
+  &__section {
     display: grid;
-  grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1;
- 
+    margin-bottom: $margin-bottom;
   }
 
-&__slide img {
-  width: 100%;
-  border-radius: 7px;
+  &__slide img {
+    width: 100%;
+    border-radius: 7px;
+  }
+
+  &__slide {
+    position: relative;
+  }
+
+  &__desc {
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+    right: 10%;
+    color: white;
+    font-size: 28px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    text-align: center;
+  }
 }
 
-&__slide {
-  position: relative;
+.footer {
+  background-color: $secondary;
+  height: 60px;
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 16px;
+    flex-wrap: wrap;
   }
 
-&__desc {
-  position: absolute;
-  left: 10%;
-  bottom: 3.5%;
-  right: 10%;
-  color: white;
-  font-size: 28px;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
-  text-align: center;
+  &__item {
+    width: 80px;
+    line-height: 15px;
+    text-align: center;
+    color: white;
   }
 
+  &__link {
+    text-decoration: none;
+  }
+  a {
+    color: white;
+  }
+
+  & a:hover,
+  & a:focus {
+    color: $primary;
+  }
 }
