@@ -160,9 +160,7 @@ h3 {
 }
 
 .offer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1;
+  display: flex;
   margin-bottom: 10px;
   gap: 10px;
   text-align: center;
@@ -173,6 +171,9 @@ h3 {
 }
 .offer__link-upper:hover {
   color: #2f80ed;
+}
+.offer__content {
+  height: 200px;
 }
 .offer__button {
   background-image: linear-gradient(to right, #56ccf2 0%, #2f80ed 51%, #56ccf2 100%);
@@ -191,6 +192,15 @@ h3 {
   background-position: right center;
   color: #0d47a1;
   text-decoration: none;
+}
+.offer__box {
+  background-color: white;
+  flex: 0 0 calc((100% - 30px) / 4);
+  display: flex;
+  flex-direction: column;
+}
+.offer p {
+  padding: 5px;
 }
 
 button {

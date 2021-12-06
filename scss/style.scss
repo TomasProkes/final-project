@@ -198,12 +198,16 @@ h3 {
 }
 
 .offer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1;
+
+  display: flex;
+  
+  // display: grid;
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-template-rows: 1;
   margin-bottom: $margin-bottom;
- gap: 10px;
+  gap: 10px;
   text-align: center;
+  
 
   &__link-upper {
     color: $third;
@@ -213,6 +217,9 @@ h3 {
   &__link-upper:hover {
     color: $secondary;
     
+  }
+  &__content {
+    height: 200px;
   }
 
   &__button {
@@ -240,7 +247,16 @@ h3 {
     color: $primary;
     text-decoration: none;
   }  
-
+  &__box {
+    background-color: $third;
+    flex: 0 0 calc((100% - 30px) / 4);
+    display: flex;
+    flex-direction: column;
+    
+  }
+  & p {
+    padding: 5px;
+  }
 
 }
 
