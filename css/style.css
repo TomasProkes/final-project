@@ -9,11 +9,16 @@ html {
 }
 
 body {
-  margin: 20px auto;
+  margin: 20px;
   font-family: "Cairo", sans-serif;
   font-size: 16px;
   background-color: #f5f3f4;
-  width: 1040px;
+}
+@media screen and (min-width: 800px) {
+  body {
+    width: 1040px;
+    margin: 20px auto;
+  }
 }
 
 h2 {
@@ -67,6 +72,14 @@ h3 {
 .header__item {
   flex: 1 1 auto;
 }
+.header__item--active {
+  color: #fcce00;
+}
+@media screen and (min-width: 800px) {
+  .header__item--active {
+    color: #fcce00;
+  }
+}
 .header__link {
   background-image: linear-gradient(to right, #56ccf2 0%, #0d47a1 25%, #56ccf2 100%);
   margin: 5px;
@@ -116,12 +129,14 @@ h3 {
   flex: 1 0 auto;
 }
 
-.upper__image {
-  min-height: 185px;
-  background: url(../images/never-stop-learning.jpg) no-repeat right center/cover;
-  border-radius: 7px;
-  margin: 5px;
-  margin-bottom: 20px;
+@media screen and (min-width: 800px) {
+  .upper__image {
+    min-height: 185px;
+    background: url(../images/never-stop-learning.jpg) no-repeat right center/cover;
+    border-radius: 7px;
+    margin: 5px;
+    margin-bottom: 20px;
+  }
 }
 
 .glide__right {
@@ -133,10 +148,18 @@ h3 {
   align-self: center;
 }
 .glide__section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 800px) {
+  .glide__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+    margin-bottom: 20px;
+  }
 }
 .glide__slide img {
   width: 100%;
@@ -169,6 +192,9 @@ h3 {
 }
 .offer__link-upper:hover {
   color: #2f80ed;
+}
+.offer__link:visited {
+  color: grey;
 }
 .offer__content {
   height: 200px;
@@ -232,6 +258,9 @@ button {
   color: white;
   text-decoration: none;
 }
+.offer-spec__link-upper:hover {
+  color: #2f80ed;
+}
 .offer-spec p {
   padding: 5px;
   margin: 0;
@@ -262,22 +291,35 @@ button {
 
 .footer {
   background-color: #2f80ed;
-  height: 60px;
+  height: 250px;
 }
 .footer__links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   list-style: none;
-  margin: 0;
-  padding: 16px;
-  flex-wrap: wrap;
 }
 .footer__item {
-  width: 80px;
-  line-height: 15px;
-  text-align: center;
   color: white;
+  text-align: center;
+  line-height: 1.4;
+}
+@media screen and (min-width: 800px) {
+  .footer {
+    height: 60px;
+  }
+  .footer__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 16px;
+    flex-wrap: wrap;
+  }
+  .footer__item {
+    width: 80px;
+    line-height: 15px;
+    text-align: center;
+    color: white;
+  }
 }
 .footer__link {
   text-decoration: none;

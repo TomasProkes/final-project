@@ -18,11 +18,20 @@ html {
 }
 
 body {
-  margin: 20px auto;
+  margin: 20px;
   font-family: $font-main-text;
   font-size: 16px;
   background-color: #f5f3f4;
+
+
+
+  @media screen and (min-width: 800px) {    
+   
   width: 1040px;
+  margin: 20px auto;
+ 
+    }
+  
 }
 
 h2 {
@@ -80,6 +89,15 @@ h3 {
   &__item {
     flex: 1 1 auto;
   }
+
+  &__item--active {
+   color: #fcce00;
+
+    @media screen and (min-width: 800px) {
+    color: #fcce00;
+   }
+  }
+
   &__link {
     background-image: linear-gradient(
       to right,
@@ -142,15 +160,34 @@ h3 {
   &__item {
     flex: 1 0 auto;
   }
+
+ 
+  // &__item--active {
+  //   background-color: #fcce00;
+
+  //   @media screen and (min-width: 800px) {
+  //   color: #fcce00;
+  //  }
+  // }
+
+
 }
 
+
+
 .upper__image {
-  min-height: 185px;
+  
+
+  @media screen and (min-width: 800px) {    
+   
+   min-height: 185px;
   background: url(../images/never-stop-learning.jpg) no-repeat right
     center/cover;
   border-radius: 7px;
   margin: 5px;
   margin-bottom: $margin-bottom;
+
+   }
 }
 
 .glide {
@@ -162,14 +199,22 @@ h3 {
     padding: 0 0 0 10px;
     align-self: center;
   }
+  &__section {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: $margin-bottom; 
+    }
 
+  @media screen and (min-width: 800px) {    
+    
   &__section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1;
     margin-bottom: $margin-bottom;
+    }
   }
-
   &__slide img {
     width: 100%;
     border-radius: 7px;
@@ -201,11 +246,17 @@ h3 {
   &__link-upper {
     color: $third;
     text-decoration: none;
+    &:hover {
+      color: $secondary;
+    }
   }
 
-  &__link-upper:hover {
-    color: $secondary;
+  
+  &__link:visited {
+      color: grey;
   }
+  
+
   &__content {
     height: 200px;
   }
@@ -279,8 +330,11 @@ button {
   &__link-upper {
     color: $third;
     text-decoration: none;
+    &:hover {
+      color: $secondary;
+    }
   }
-
+ 
   & p {
     padding: 5px;
     margin: 0;
@@ -319,8 +373,24 @@ button {
 
 .footer {
   background-color: $secondary;
-  height: 60px;
+  height: 250px;
+  
 
+  &__links {
+    list-style: none;
+    
+  }
+
+  &__item {
+      
+    color: $third;
+    text-align: center;
+    line-height: 1.4;
+  }
+  
+
+  @media screen and (min-width: 800px) {  
+    height: 60px;  
   &__links {
     display: flex;
     justify-content: space-between;
@@ -331,12 +401,14 @@ button {
     flex-wrap: wrap;
   }
 
+
   &__item {
     width: 80px;
     line-height: 15px;
     text-align: center;
     color: $third;
   }
+}
 
   &__link {
     text-decoration: none;
