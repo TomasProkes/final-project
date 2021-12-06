@@ -12,5 +12,15 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1"
-  }
+  },
+  
+    "emmet.includeLanguages": {
+      "nunjucks": "html"
+    },
+  
+    "files.associations": {
+      "*.njk": "html"
+    }
+  
+ 
 }

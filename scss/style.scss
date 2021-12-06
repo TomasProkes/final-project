@@ -6,7 +6,7 @@ $font-main-text: "Cairo", sans-serif;
 
 $padding-block: 10px;
 
-$margin-bottom: 10px;
+$margin-bottom: 20px;
 
 html {
   box-sizing: border-box;
@@ -35,10 +35,9 @@ h3 {
   margin: 0;
   background-color: $primary;
   color: $third;
+  border-radius: 7px;
 }
-// .header__whole {
-//   position: fixed;
-// }
+
 
 .header {
   display: flex;
@@ -108,7 +107,7 @@ h3 {
   }
 }
 .menu {
-  margin-bottom: $margin-bottom;
+ 
 
   &__link {
     background-image: linear-gradient(
@@ -200,13 +199,9 @@ h3 {
 .offer {
 
   display: flex;
-  
-  // display: grid;
-  // grid-template-columns: repeat(4, 1fr);
-  // grid-template-rows: 1;
-  margin-bottom: $margin-bottom;
   gap: 10px;
   text-align: center;
+  margin: 0 5px $margin-bottom 5px;
   
 
   &__link-upper {
@@ -240,6 +235,7 @@ h3 {
     box-shadow: 0 0 20px #eee;
     border-radius: 7px;
     display: block;
+    
   }
 
   &__button:hover {
@@ -249,6 +245,7 @@ h3 {
   }  
   &__box {
     background-color: $third;
+    border-radius: 7px;
     flex: 0 0 calc((100% - 30px) / 4);
     display: flex;
     flex-direction: column;
@@ -265,6 +262,78 @@ button {
   border: none;
   margin: 30px 10px 10px 10px;
 
+}
+
+.offer-spec {
+ 
+  text-align: center;
+  // margin: 0 5px $margin-bottom 5px;
+  background-color: lightgray;
+  padding-bottom: $margin-bottom;
+  padding-top: 5px;
+
+  &__content {
+    display: flex;
+    
+  
+  text-align: center;
+  margin: 0 0 $margin-bottom 5px;
+ 
+  }
+         
+  &__box{
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+    
+    flex-direction: column;
+      background-color: $third;
+      border-radius: 7px;
+      flex: 0 0 calc((100% - 25px) / 3);
+     
+
+  }
+  &__link-upper {
+    color: $third;
+    text-decoration: none;
+  }
+
+  & p {
+    padding: 5px;
+    margin: 0;
+  }
+
+  &__button {
+    
+    background-image: linear-gradient(
+      to right,
+      #56ccf2 0%,
+      #2f80ed 51%,
+      #56ccf2 100%
+    );
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-decoration: none;
+    color: $third;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 7px;
+    display: block;
+    
+  }
+
+  &__button:hover {
+    background-position: right center;
+    color: $primary;
+    text-decoration: none;
+  }  
+ &__icon {
+  width: 20%;
+  align-self: center;
+  margin-top: 8px;
+ }
 }
 
 .footer {

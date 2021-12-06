@@ -26,6 +26,7 @@ h3 {
   margin: 0;
   background-color: #0d47a1;
   color: white;
+  border-radius: 7px;
 }
 
 .header {
@@ -85,9 +86,6 @@ h3 {
   text-decoration: none;
 }
 
-.menu {
-  margin-bottom: 10px;
-}
 .menu__link {
   background-image: linear-gradient(to right, #56ccf2 0%, #2f80ed 51%, #56ccf2 100%);
   margin: 5px;
@@ -123,7 +121,7 @@ h3 {
   background: url(../images/never-stop-learning.jpg) no-repeat right center/cover;
   border-radius: 7px;
   margin: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .glide__right {
@@ -138,7 +136,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .glide__slide img {
   width: 100%;
@@ -161,9 +159,9 @@ h3 {
 
 .offer {
   display: flex;
-  margin-bottom: 10px;
   gap: 10px;
   text-align: center;
+  margin: 0 5px 20px 5px;
 }
 .offer__link-upper {
   color: white;
@@ -195,6 +193,7 @@ h3 {
 }
 .offer__box {
   background-color: white;
+  border-radius: 7px;
   flex: 0 0 calc((100% - 30px) / 4);
   display: flex;
   flex-direction: column;
@@ -207,6 +206,58 @@ button {
   background-color: transparent;
   border: none;
   margin: 30px 10px 10px 10px;
+}
+
+.offer-spec {
+  text-align: center;
+  background-color: lightgray;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+.offer-spec__content {
+  display: flex;
+  text-align: center;
+  margin: 0 0 20px 5px;
+}
+.offer-spec__box {
+  display: flex;
+  gap: 10px;
+  margin-right: 10px;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 7px;
+  flex: 0 0 calc((100% - 25px) / 3);
+}
+.offer-spec__link-upper {
+  color: white;
+  text-decoration: none;
+}
+.offer-spec p {
+  padding: 5px;
+  margin: 0;
+}
+.offer-spec__button {
+  background-image: linear-gradient(to right, #56ccf2 0%, #2f80ed 51%, #56ccf2 100%);
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 7px;
+  display: block;
+}
+.offer-spec__button:hover {
+  background-position: right center;
+  color: #0d47a1;
+  text-decoration: none;
+}
+.offer-spec__icon {
+  width: 20%;
+  align-self: center;
+  margin-top: 8px;
 }
 
 .footer {
