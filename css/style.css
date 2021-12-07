@@ -42,7 +42,13 @@ h3 {
 }
 .header__logo {
   display: flex;
-  margin: 0;
+  margin: 0 auto;
+}
+@media screen and (min-width: 800px) {
+  .header__logo {
+    display: flex;
+    margin: 0;
+  }
 }
 .header__svg-book {
   max-width: 100%;
@@ -62,43 +68,68 @@ h3 {
   margin-left: 10px;
 }
 .header__right-menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 300px;
-  justify-content: space-between;
-}
-.header__item {
-  flex: 1 1 auto;
-}
-.header__item--active {
-  color: #fcce00;
+  display: none;
 }
 @media screen and (min-width: 800px) {
+  .header__right-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    justify-content: space-between;
+  }
+  .header__item {
+    flex: 1 1 auto;
+  }
   .header__item--active {
     color: #fcce00;
   }
 }
-.header__link {
-  background-image: linear-gradient(to right, #56ccf2 0%, #0d47a1 25%, #56ccf2 100%);
-  margin: 5px;
-  padding: 5px;
-  text-align: center;
-  transition: 0.5s;
-  background-size: 200% auto;
-  text-decoration: none;
-  color: white;
-  box-shadow: 0 0 20px #eee;
-  border-radius: 7px;
-  display: block;
+@media screen and (min-width: 800px) and (min-width: 800px) {
+  .header__item--active {
+    color: #fcce00;
+  }
 }
-.header__link:hover {
-  background-position: right center;
-  color: #0d47a1;
-  text-decoration: none;
+@media screen and (min-width: 800px) {
+  .header__link {
+    background-image: linear-gradient(to right, #56ccf2 0%, #0d47a1 25%, #56ccf2 100%);
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 7px;
+    display: block;
+  }
+}
+@media screen and (min-width: 800px) {
+  .header__link:hover {
+    background-position: right center;
+    color: #0d47a1;
+    text-decoration: none;
+  }
 }
 
+.menu__checkbox {
+  position: absolute;
+  left: -9999px;
+}
+.menu__toggler {
+  border: solid 1px #0d47a1;
+  color: #0d47a1;
+  padding: 2px;
+  border-radius: 7px;
+}
+.menu__list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .menu__link {
   background-image: linear-gradient(to right, #56ccf2 0%, #2f80ed 51%, #56ccf2 100%);
   margin: 5px;
@@ -117,16 +148,24 @@ h3 {
   color: #0d47a1;
   text-decoration: none;
 }
-.menu__list {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0;
+.menu__checkbox:checked ~ .menu__list {
+  display: block;
 }
-.menu__item {
-  flex: 1 0 auto;
+@media screen and (min-width: 800px) {
+  .menu__toggler {
+    display: none;
+  }
+  .menu__list {
+    display: flex !important;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .menu__item {
+    flex: 1 0 auto;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -143,9 +182,14 @@ h3 {
   width: 515px;
 }
 .glide__next-to {
-  width: 510px;
-  padding: 0 0 0 10px;
-  align-self: center;
+  text-align: center;
+}
+@media screen and (min-width: 800px) {
+  .glide__next-to {
+    width: 510px;
+    padding: 0 0 0 10px;
+    align-self: center;
+  }
 }
 .glide__section {
   display: flex;
@@ -181,10 +225,19 @@ h3 {
 }
 
 .offer {
-  display: flex;
-  gap: 10px;
+  display: block;
   text-align: center;
-  margin: 0 5px 20px 5px;
+}
+@media screen and (min-width: 800px) {
+  .offer {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    margin: 0 5px 20px 5px;
+  }
+  .offer__content {
+    height: 200px;
+  }
 }
 .offer__link-upper {
   color: white;
@@ -195,9 +248,6 @@ h3 {
 }
 .offer__link:visited {
   color: grey;
-}
-.offer__content {
-  height: 200px;
 }
 .offer__button {
   background-image: linear-gradient(to right, #56ccf2 0%, #2f80ed 51%, #56ccf2 100%);
@@ -223,6 +273,7 @@ h3 {
   flex: 0 0 calc((100% - 30px) / 4);
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 .offer p {
   padding: 5px;
@@ -231,28 +282,50 @@ h3 {
 button {
   background-color: transparent;
   border: none;
-  margin: 30px 10px 10px 10px;
+  margin: 10px;
+}
+@media screen and (min-width: 800px) {
+  button {
+    margin: 30px 10px 10px 10px;
+  }
 }
 
 .offer-spec {
-  text-align: center;
   background-color: lightgray;
-  padding-bottom: 20px;
-  padding-top: 5px;
+}
+.offer-spec h2 {
+  text-align: center;
 }
 .offer-spec__content {
-  display: flex;
   text-align: center;
-  margin: 0 0 20px 5px;
+  margin-bottom: 20px;
 }
 .offer-spec__box {
-  display: flex;
-  gap: 10px;
-  margin-right: 10px;
-  flex-direction: column;
   background-color: white;
   border-radius: 7px;
-  flex: 0 0 calc((100% - 25px) / 3);
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 800px) {
+  .offer-spec {
+    text-align: center;
+    background-color: lightgray;
+    padding-bottom: 20px;
+    padding-top: 5px;
+  }
+  .offer-spec__content {
+    display: flex;
+    text-align: center;
+    margin: 0 0 20px 5px;
+  }
+  .offer-spec__box {
+    display: flex;
+    gap: 10px;
+    margin-right: 10px;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 7px;
+    flex: 0 0 calc((100% - 25px) / 3);
+  }
 }
 .offer-spec__link-upper {
   color: white;

@@ -23,15 +23,10 @@ body {
   font-size: 16px;
   background-color: #f5f3f4;
 
-
-
-  @media screen and (min-width: 800px) {    
-   
-  width: 1040px;
-  margin: 20px auto;
- 
-    }
-  
+  @media screen and (min-width: 800px) {
+    width: 1040px;
+    margin: 20px auto;
+  }
 }
 
 h2 {
@@ -55,7 +50,14 @@ h3 {
 
   &__logo {
     display: flex;
-    margin: 0;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 800px) {
+    &__logo {
+      display: flex;
+      margin: 0;
+    }
   }
 
   &__svg-book {
@@ -77,52 +79,75 @@ h3 {
   &__title {
     margin-left: 10px;
   }
-
   &__right-menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 300px;
-    justify-content: space-between;
-  }
-  &__item {
-    flex: 1 1 auto;
+    display: none;
   }
 
-  &__item--active {
-   color: #fcce00;
+  @media screen and (min-width: 800px) {
+    &__right-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 300px;
+      justify-content: space-between;
+    }
+    &__item {
+      flex: 1 1 auto;
+    }
 
-    @media screen and (min-width: 800px) {
-    color: #fcce00;
-   }
-  }
+    &__item--active {
+      color: #fcce00;
 
-  &__link {
-    background-image: linear-gradient(
-      to right,
-      #56ccf2 0%,
-      #0d47a1 25%,
-      #56ccf2 100%
-    );
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-    transition: 0.5s;
-    background-size: 200% auto;
-    text-decoration: none;
-    color: $third;
-    box-shadow: 0 0 20px #eee;
-    border-radius: 7px;
-    display: block;
-  }
-  &__link:hover {
-    background-position: right center;
-    color: $primary;
-    text-decoration: none;
+      @media screen and (min-width: 800px) {
+        color: #fcce00;
+      }
+    }
+
+    &__link {
+      background-image: linear-gradient(
+        to right,
+        #56ccf2 0%,
+        #0d47a1 25%,
+        #56ccf2 100%
+      );
+      margin: 5px;
+      padding: 5px;
+      text-align: center;
+      transition: 0.5s;
+      background-size: 200% auto;
+      text-decoration: none;
+      color: $third;
+      box-shadow: 0 0 20px #eee;
+      border-radius: 7px;
+      display: block;
+    }
+    &__link:hover {
+      background-position: right center;
+      color: $primary;
+      text-decoration: none;
+    }
   }
 }
 .menu {
+  &__checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+  &__toggler {
+    border: solid 1px $primary;
+    color: $primary;
+    padding: 2px;
+    border-radius: 7px;
+  }
+
+  &__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   &__link {
     background-image: linear-gradient(
       to right,
@@ -148,20 +173,30 @@ h3 {
     text-decoration: none;
   }
 
-  &__list {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+  &__checkbox:checked ~ &__list {
+    display: block;
   }
 
-  &__item {
-    flex: 1 0 auto;
+  @media screen and (min-width: 800px) {
+    &__toggler {
+      display: none;
+    }
+
+    &__list {
+      display: flex !important;
+      list-style: none;
+
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__item {
+      flex: 1 0 auto;
+    }
   }
 
- 
   // &__item--active {
   //   background-color: #fcce00;
 
@@ -169,50 +204,48 @@ h3 {
   //   color: #fcce00;
   //  }
   // }
-
-
 }
 
-
-
 .upper__image {
-  
-
-  @media screen and (min-width: 800px) {    
-   
-   min-height: 185px;
-  background: url(../images/never-stop-learning.jpg) no-repeat right
-    center/cover;
-  border-radius: 7px;
-  margin: 5px;
-  margin-bottom: $margin-bottom;
-
-   }
+  @media screen and (min-width: 800px) {
+    min-height: 185px;
+    background: url(../images/never-stop-learning.jpg) no-repeat right
+      center/cover;
+    border-radius: 7px;
+    margin: 5px;
+    margin-bottom: $margin-bottom;
+  }
 }
 
 .glide {
   &__right {
     width: 515px;
   }
+
   &__next-to {
-    width: 510px;
-    padding: 0 0 0 10px;
-    align-self: center;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 800px) {
+    &__next-to {
+      width: 510px;
+      padding: 0 0 0 10px;
+      align-self: center;
+    }
   }
   &__section {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin-bottom: $margin-bottom; 
-    }
-
-  @media screen and (min-width: 800px) {    
-    
-  &__section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: $margin-bottom;
+  }
+
+  @media screen and (min-width: 800px) {
+    &__section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1;
+      margin-bottom: $margin-bottom;
     }
   }
   &__slide img {
@@ -238,10 +271,19 @@ h3 {
 }
 
 .offer {
-  display: flex;
-  gap: 10px;
+  display: block;
   text-align: center;
-  margin: 0 5px $margin-bottom 5px;
+
+  @media screen and (min-width: 800px) {
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    margin: 0 5px $margin-bottom 5px;
+
+    &__content {
+      height: 200px;
+    }
+  }
 
   &__link-upper {
     color: $third;
@@ -251,14 +293,8 @@ h3 {
     }
   }
 
-  
   &__link:visited {
-      color: grey;
-  }
-  
-
-  &__content {
-    height: 200px;
+    color: grey;
   }
 
   &__button {
@@ -291,6 +327,7 @@ h3 {
     flex: 0 0 calc((100% - 30px) / 4);
     display: flex;
     flex-direction: column;
+    margin-bottom: $margin-bottom;
   }
   & p {
     padding: 5px;
@@ -300,33 +337,51 @@ h3 {
 button {
   background-color: transparent;
   border: none;
-  margin: 30px 10px 10px 10px;
+  margin: 10px;
+
+  @media screen and (min-width: 800px) {
+    margin: 30px 10px 10px 10px;
+  }
 }
 
 .offer-spec {
-  text-align: center;
-  // margin: 0 5px $margin-bottom 5px;
   background-color: lightgray;
-  padding-bottom: $margin-bottom;
-  padding-top: 5px;
 
-  &__content {
-    display: flex;
-
+  & h2 {
     text-align: center;
-    margin: 0 0 $margin-bottom 5px;
   }
-
+  &__content {
+    text-align: center;
+    margin-bottom: $margin-bottom;
+  }
   &__box {
-    display: flex;
-    gap: 10px;
-    margin-right: 10px;
-
-    flex-direction: column;
     background-color: $third;
     border-radius: 7px;
-    flex: 0 0 calc((100% - 25px) / 3);
+    margin-bottom: $margin-bottom;
   }
+
+  @media screen and (min-width: 800px) {
+    text-align: center;
+    background-color: lightgray;
+    padding-bottom: $margin-bottom;
+    padding-top: 5px;
+
+    &__content {
+      display: flex;
+      text-align: center;
+      margin: 0 0 $margin-bottom 5px;
+    }
+    &__box {
+      display: flex;
+      gap: 10px;
+      margin-right: 10px;
+      flex-direction: column;
+      background-color: $third;
+      border-radius: 7px;
+      flex: 0 0 calc((100% - 25px) / 3);
+    }
+  }
+
   &__link-upper {
     color: $third;
     text-decoration: none;
@@ -334,7 +389,7 @@ button {
       color: $secondary;
     }
   }
- 
+
   & p {
     padding: 5px;
     margin: 0;
@@ -374,41 +429,36 @@ button {
 .footer {
   background-color: $secondary;
   height: 250px;
-  
 
   &__links {
     list-style: none;
-    
   }
 
   &__item {
-      
     color: $third;
     text-align: center;
     line-height: 1.4;
   }
-  
 
-  @media screen and (min-width: 800px) {  
-    height: 60px;  
-  &__links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 16px;
-    flex-wrap: wrap;
+  @media screen and (min-width: 800px) {
+    height: 60px;
+    &__links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 16px;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 80px;
+      line-height: 15px;
+      text-align: center;
+      color: $third;
+    }
   }
-
-
-  &__item {
-    width: 80px;
-    line-height: 15px;
-    text-align: center;
-    color: $third;
-  }
-}
 
   &__link {
     text-decoration: none;
