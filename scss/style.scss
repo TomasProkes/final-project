@@ -218,21 +218,10 @@ h3 {
 }
 
 .glide {
-  &__right {
-    width: 515px;
-  }
-
   &__next-to {
     text-align: center;
   }
 
-  @media screen and (min-width: 800px) {
-    &__next-to {
-      width: 510px;
-      padding: 0 0 0 10px;
-      align-self: center;
-    }
-  }
   &__section {
     display: flex;
     flex-direction: column;
@@ -247,7 +236,17 @@ h3 {
       grid-template-rows: 1;
       margin-bottom: $margin-bottom;
     }
+
+    &__next-to {
+      width: 510px;
+      padding: 0 0 0 10px;
+      align-self: center;
+    }
+    &__right {
+      width: 515px;
+    }
   }
+
   &__slide img {
     width: 100%;
     border-radius: 7px;
@@ -346,6 +345,7 @@ button {
 
 .offer-spec {
   background-color: lightgray;
+  padding-bottom: $margin-bottom;
 
   & h2 {
     text-align: center;
@@ -426,12 +426,90 @@ button {
   }
 }
 
+.group-language-desc {
+  padding: 0 5px;
+
+  h2 {
+    text-align: center;
+  }
+
+  h3 {
+    padding: 0 5px;
+    display: inline;
+  }
+
+  &__p {
+    padding: 0 5px;
+    text-align: justify;
+  }
+}
+
+.language {
+  background-color: lightgray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: $margin-bottom;
+
+  &__text {
+    color: $primary;
+    font-size: 20px;
+  }
+
+  &__content {
+    text-align: center;
+
+    flex-direction: column;
+    display: flex;
+    text-decoration: none;
+  }
+  &__box {
+    background-color: $third;
+    border-radius: 7px;
+    margin-bottom: $margin-bottom;
+    display: block;
+    gap: 10px;
+
+    flex-direction: column;
+    flex: 0 0 calc(100% - 25px);
+  }
+
+  @media screen and (min-width: 800px) {
+    text-align: center;
+    background-color: lightgray;
+
+    padding-top: 20px;
+
+    &__content {
+      display: flex;
+
+      text-align: center;
+    }
+    &__box {
+      margin-right: 10px;
+      flex: 0 0 calc((100% - 25px) / 4);
+    }
+    &__icon {
+      width: 20%;
+    }
+
+  }
+  
+  &__icon {
+    align-self: center;
+    margin-top: 8px;
+    
+  }
+}
+
 .footer {
   background-color: $secondary;
   height: 250px;
 
   &__links {
     list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   &__item {

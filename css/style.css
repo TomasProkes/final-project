@@ -178,18 +178,8 @@ h3 {
   }
 }
 
-.glide__right {
-  width: 515px;
-}
 .glide__next-to {
   text-align: center;
-}
-@media screen and (min-width: 800px) {
-  .glide__next-to {
-    width: 510px;
-    padding: 0 0 0 10px;
-    align-self: center;
-  }
 }
 .glide__section {
   display: flex;
@@ -203,6 +193,14 @@ h3 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1;
     margin-bottom: 20px;
+  }
+  .glide__next-to {
+    width: 510px;
+    padding: 0 0 0 10px;
+    align-self: center;
+  }
+  .glide__right {
+    width: 515px;
   }
 }
 .glide__slide img {
@@ -292,6 +290,7 @@ button {
 
 .offer-spec {
   background-color: lightgray;
+  padding-bottom: 20px;
 }
 .offer-spec h2 {
   text-align: center;
@@ -362,12 +361,78 @@ button {
   margin-top: 8px;
 }
 
+.group-language-desc {
+  padding: 0 5px;
+}
+.group-language-desc h2 {
+  text-align: center;
+}
+.group-language-desc h3 {
+  padding: 0 5px;
+  display: inline;
+}
+.group-language-desc__p {
+  padding: 0 5px;
+  text-align: justify;
+}
+
+.language {
+  background-color: lightgray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+.language__text {
+  color: #0d47a1;
+  font-size: 20px;
+}
+.language__content {
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  text-decoration: none;
+}
+.language__box {
+  background-color: white;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  display: block;
+  gap: 10px;
+  flex-direction: column;
+  flex: 0 0 calc(100% - 25px);
+}
+@media screen and (min-width: 800px) {
+  .language {
+    text-align: center;
+    background-color: lightgray;
+    padding-top: 20px;
+  }
+  .language__content {
+    display: flex;
+    text-align: center;
+  }
+  .language__box {
+    margin-right: 10px;
+    flex: 0 0 calc((100% - 25px) / 4);
+  }
+  .language__icon {
+    width: 20%;
+  }
+}
+.language__icon {
+  align-self: center;
+  margin-top: 8px;
+}
+
 .footer {
   background-color: #2f80ed;
   height: 250px;
 }
 .footer__links {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .footer__item {
   color: white;
