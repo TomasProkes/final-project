@@ -197,13 +197,15 @@ h3 {
     }
   }
 
-  // &__item--active {
-  //   background-color: #fcce00;
+  &__item--active &__link {
+    background-image: none;
+    background-color: $primary;
+    color: $secondary;
+  }
 
-  //   @media screen and (min-width: 800px) {
-  //   color: #fcce00;
-  //  }
-  // }
+  &__item--active &__link:hover {
+    color: $third;
+  }
 }
 
 .upper__image {
@@ -227,6 +229,9 @@ h3 {
     flex-direction: column;
     align-items: center;
     margin-bottom: $margin-bottom;
+  }
+  &__right {
+    width: 515px;
   }
 
   @media screen and (min-width: 800px) {
@@ -426,11 +431,11 @@ button {
   }
 }
 
-.group-language-desc {
+.group-course-desc {
   padding: 0 5px;
 
   ul {
-     padding: 0 5px;
+    padding: 0 5px;
     font-size: 14px;
     list-style: none;
   }
@@ -438,7 +443,7 @@ button {
   li {
     display: inline-block;
   }
-  
+
   h2 {
     text-align: center;
   }
@@ -502,13 +507,79 @@ button {
     &__icon {
       width: 20%;
     }
-
   }
-  
+
   &__icon {
     align-self: center;
     margin-top: 8px;
-    
+  }
+}
+
+.english {
+  padding: 0 5px;
+
+  &__list {
+    padding: 0 5px;
+    font-size: 14px;
+    list-style: none;
+  }
+
+  &__box &__item {
+    display: block;
+  }
+  &__item {
+    display: inline-block;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  &__h3-online {
+    padding: 0 5px;
+    display: inline;
+  }
+
+  &__p {
+    padding: 0 5px;
+    text-align: justify;
+  }
+  &__box {
+    margin-bottom: 40px;
+  }
+  img {
+    width: 100%;
+    border-radius: 7px;
+  }
+
+  &__item-desc {
+    text-align: justify;
+  }
+  &__h2 {
+    display: block;
+    text-align: center;
+    margin-bottom: $margin-bottom;
+    background-color: transparent;
+    color: $primary;
+  }
+  &__online-course {
+    background-color: lightgray;
+  }
+
+  @media screen and (min-width: 800px) {
+    &__box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1;
+      gap: 20px;
+    }
+    .offer__box {
+      flex: 0 0 calc((100% - 30px) / 3);
+      margin-bottom: 0;
+    }
+    .offer__content {
+      height: 250px;
+    }
   }
 }
 
