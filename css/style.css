@@ -364,6 +364,14 @@ button {
 .group-language-desc {
   padding: 0 5px;
 }
+.group-language-desc ul {
+  padding: 0 5px;
+  font-size: 14px;
+  list-style: none;
+}
+.group-language-desc li {
+  display: inline-block;
+}
 .group-language-desc h2 {
   text-align: center;
 }

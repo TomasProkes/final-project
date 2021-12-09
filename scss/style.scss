@@ -429,6 +429,16 @@ button {
 .group-language-desc {
   padding: 0 5px;
 
+  ul {
+     padding: 0 5px;
+    font-size: 14px;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+  
   h2 {
     text-align: center;
   }
