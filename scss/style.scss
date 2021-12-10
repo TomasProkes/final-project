@@ -85,6 +85,8 @@ h3 {
     display: none;
   }
 
+
+
   @media screen and (min-width: 800px) {
     &__right-menu {
       display: flex;
@@ -94,41 +96,64 @@ h3 {
       width: 300px;
       justify-content: space-between;
     }
+
     &__item {
       flex: 1 1 auto;
     }
+ 
+  & li {
+    position: relative;
+  }
 
-    &__item--active {
-      color: #fcce00;
+  &__submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #56ccf2;
+    border-radius: $b-radius;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    min-width: 200px;
+  }
+  & li:hover &__submenu {
+    display: block;
+   
+  }
 
-      @media screen and (min-width: 800px) {
-        color: #fcce00;
-      }
-    }
+  &__subitem:hover {
+    background-color: #2f80ed;
+  }
 
-    &__link {
-      background-image: linear-gradient(
-        to right,
-        #56ccf2 0%,
-        #0d47a1 25%,
-        #56ccf2 100%
-      );
-      margin: 5px;
-      padding: 5px;
-      text-align: center;
-      transition: 0.5s;
-      background-size: 200% auto;
-      text-decoration: none;
-      color: $third;
-      box-shadow: 0 0 20px #eee;
-      border-radius: $b-radius;
-      display: block;
-    }
-    &__link:hover {
-      background-position: right center;
-      color: $primary;
-      text-decoration: none;
-    }
+  &__sublink {
+    text-decoration: none;
+    
+  }
+}
+
+  &__link {
+    background-image: linear-gradient(
+      to right,
+      #56ccf2 0%,
+      #0d47a1 25%,
+      #56ccf2 100%
+    );
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-decoration: none;
+    color: $third;
+    box-shadow: 0 0 20px #eee;
+    border-radius: $b-radius;
+    display: block;
+  }
+  &__link:hover {
+    background-position: right center;
+    color: $primary;
+    text-decoration: none;
   }
 }
 .menu {
@@ -179,7 +204,11 @@ h3 {
     display: block;
   }
 
-  @media screen and (min-width: 800px) {
+  &__submenu {
+    display: none;
+  }
+
+  @media screen and (min-width: 800px)  {
     &__toggler {
       display: none;
     }
@@ -197,8 +226,36 @@ h3 {
     &__item {
       flex: 1 0 auto;
     }
-  }
 
+    & li {
+      position: relative;
+    }
+
+    &__submenu {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: #56ccf2;
+      border-radius: $b-radius;
+      list-style: none;
+      margin: 0;
+      padding: 5px;
+      min-width: 200px;
+    }
+
+    & li:hover &__submenu {
+      display: block;
+    }
+
+    &__subitem:hover {
+      background-color: #2f80ed;
+    }
+
+    &__sublink {
+      text-decoration: none;
+    }
+  }
   &__item--active &__link {
     background-image: none;
     background-color: $primary;
