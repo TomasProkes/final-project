@@ -489,6 +489,40 @@ button {
 .english__online-course {
   background-color: lightgray;
 }
+.english .offer {
+  margin-bottom: 30px;
+}
+.english__form-button {
+  display: flex;
+  justify-content: center;
+}
+.english__form-field {
+  margin-bottom: 10px;
+}
+.english__form-field input[type=text], .english__form-field input[type=number], .english__form-field input[type=email], .english__form-field input[type=date], .english__form-field input[type=tel], .english__form-field textarea {
+  width: 100%;
+  border: 1px solid #0d47a1;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 10px;
+}
+.english__form {
+  border: solid 1px #0d47a1;
+  background-color: lightgray;
+  border-radius: 7px;
+  margin-bottom: 30px;
+  padding: 0 20px 30px 20px;
+}
+.english__form-field > label {
+  display: block;
+}
+.english .required {
+  color: red;
+}
+.english form {
+  width: 100%;
+  max-width: 400px;
+}
 @media screen and (min-width: 800px) {
   .english__box {
     display: grid;
@@ -502,6 +536,13 @@ button {
   }
   .english .offer__content {
     height: 250px;
+  }
+  .english form {
+    width: 100%;
+    max-width: 1040px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 

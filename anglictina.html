@@ -44,12 +44,7 @@ title: Anglické kurzy Jazyková škola Lekcio
 
         <img src="/images/seventh-blackboard-english-language.jpg" alt="Blackboard English language">
     </div>
-    <!-- PRIHLASKA ONLINA -->
-    <h3 class="english__h3-online">Přihláška on-line</h3>
 
-    <p class="group-language-desc__p">Pokud se chcete do&nbsp;kurzu přihlásit on-line, nejprve vyplňte vstupní
-        test&nbsp;<a class="group-language-desc__link" href="#">zde</a>. Automatická odpověď na&nbsp;vámi odeslaný test
-        obsahuje link do&nbsp;kurzů, které jsou pro&nbsp;vás vhodné.</p>
 
     <!-- NABIDKA KURZU ANGLICTINY -->
 
@@ -92,36 +87,102 @@ title: Anglické kurzy Jazyková škola Lekcio
         </div>
     </div>
 
-    <!-- FORMULAR -->
+
+    <!-- PRIHLASKA ONLINE -->
+    <h3 class="english__h3-online">Přihláška on-line</h3>
+
+    <p class="group-language-desc__p">Pokud se chcete do&nbsp;kurzu přihlásit on-line, nejprve vyplňte vstupní
+        test&nbsp;<a class="group-language-desc__link" href="#">ZDE</a>. Automatická odpověď na&nbsp;vámi odeslaný test
+        obsahuje link do&nbsp;kurzů, které jsou pro&nbsp;vás vhodné.</p>
 
 
-    <div class="english__online-course">
+    <!-- FORM-->
+
+
+    <div class="english__form">
         <h2>Online poptávka na kurz</h2>
-        Upozornění - bez vyplnění vstupního testu není přihláška považována za závaznou
+        <p>Upozornění - bez vyplnění vstupního testu není přihláška považována za závaznou</p>
+        <form action="" method="post">
+       
+            <div class="english__form-field">
+                <label for="kurz">Kód kurzu <span class="required">*</span></label>
+                <input type="text" name="kurz" id="kurz" required>
+            </div>
 
-        Kurz
-        Kód kurzu *
-        Osobní informace
-        Jméno *
 
-        Příjmení *
+            <div class="english__form-field">
+                <label for="name"> Jméno <span class="required">*</span></label>
+                <input type="text" name="name" id="name" required>
+            </div>
 
-        Datum narození *
-        Mobilní telefon *
-        E-mail *
-        Město
-        Ulice
-        PSČ
-        Země
-        Pohlaví *
-        Muž
-        Žena
-        Přihlašovaná osoba je *
-        Dítě
-        Student
-        Ostatní
-        Poznámka
+            <div class="english__form-field">
+                <label for="surname"> Příjmení <span class="required">*</span></label>
+                <input type="text" name="surname" id="surname" required>
+            </div>
 
-        Odeslat
+            <div class="english__form-field">
+                <label for="date">Datum narození <span class="required">*</span></label>
+                <input type="date" name="date" id="date" required>
+            </div>
+
+            <div class="english__form-field">
+                <label for="telefon">Mobilní telefon <span class="required">*</span></label>
+                <input type="tel" name="telefon" id="telefon" required>
+
+            </div>
+
+            <div class="english__form-field">
+                <label for="email">E-mail <span class="required">*</span></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="english__form-field">
+                <label for="city">Město</label>
+                <input type="text" name="city" id="city">
+            </div>
+
+            <div class="english__form-field">
+                <label for="street">Ulice</label>
+                <input type="text" name="street" id="street">
+            </div>
+
+            <div class="english__form-field">
+                <label for="postal-number">PSČ</label>
+                <input type="number" name="postal-number" id="postal-number">
+            </div>
+
+            <div class="english__form-field">
+                <label>Přihlašovaná osoba je <span class="required">*</span></label>
+                <div class="english__form-radio">
+                    <input type="radio" name="person" id="person1" value="child" required>
+                    <label for="person1">Dítě</label>
+                </div>
+                <div class="english__form-radio">
+                    <input type="radio" name="person" id="person2" value="student" required>
+                    <label for="person2">Student</label>
+                </div>
+                <div class="english__form-radio">
+                    <input type="radio" name="person" id="person3" value="others" required>
+                    <label for="person3">Ostatní</label>
+                </div>
+            </div>
+
+            <div class="english__form-field">
+                <label for="note">Poznámka</label>
+                <textarea name="note" id="note" cols="30" rows="5" maxlength="30"></textarea>
+            </div>
+
+            <div class="english__form-field">
+                <div class="english__form-checkbox">
+                    <input type="checkbox" name="approval" id="approval" value="yes" required>
+                    <label for="approval">Souhlasím s poskytnutím osobních údajů <span class="required">*</span></label>
+                </div>
+            </div>
+
+            <div class="english__form-button">
+                <button><a class="offer__button english__button" href="#">Odeslat</a></button>
+            </div>
+        </form>
+
     </div>
 </div>

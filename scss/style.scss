@@ -8,6 +8,8 @@ $padding-block: 10px;
 
 $margin-bottom: 20px;
 
+$b-radius: 7px;
+
 html {
   box-sizing: border-box;
 }
@@ -39,7 +41,7 @@ h3 {
   margin: 0;
   background-color: $primary;
   color: $third;
-  border-radius: 7px;
+  border-radius: $b-radius;
 }
 
 .header {
@@ -119,7 +121,7 @@ h3 {
       text-decoration: none;
       color: $third;
       box-shadow: 0 0 20px #eee;
-      border-radius: 7px;
+      border-radius: $b-radius;
       display: block;
     }
     &__link:hover {
@@ -138,7 +140,7 @@ h3 {
     border: solid 1px $primary;
     color: $primary;
     padding: 2px;
-    border-radius: 7px;
+    border-radius: $b-radius;
   }
 
   &__list {
@@ -163,7 +165,7 @@ h3 {
     text-decoration: none;
     color: $third;
     box-shadow: 0 0 20px #eee;
-    border-radius: 7px;
+    border-radius: $b-radius;
     display: block;
   }
 
@@ -213,7 +215,7 @@ h3 {
     min-height: 185px;
     background: url(../images/never-stop-learning.jpg) no-repeat right
       center/cover;
-    border-radius: 7px;
+    border-radius: $b-radius;
     margin: 5px;
     margin-bottom: $margin-bottom;
   }
@@ -254,7 +256,7 @@ h3 {
 
   &__slide img {
     width: 100%;
-    border-radius: 7px;
+    border-radius: $b-radius;
   }
 
   &__slide {
@@ -316,7 +318,7 @@ h3 {
     text-decoration: none;
     color: $third;
     box-shadow: 0 0 20px #eee;
-    border-radius: 7px;
+    border-radius: $b-radius;
     display: block;
   }
 
@@ -327,7 +329,7 @@ h3 {
   }
   &__box {
     background-color: $third;
-    border-radius: 7px;
+    border-radius: $b-radius;
     flex: 0 0 calc((100% - 30px) / 4);
     display: flex;
     flex-direction: column;
@@ -361,7 +363,7 @@ button {
   }
   &__box {
     background-color: $third;
-    border-radius: 7px;
+    border-radius: $b-radius;
     margin-bottom: $margin-bottom;
   }
 
@@ -382,7 +384,7 @@ button {
       margin-right: 10px;
       flex-direction: column;
       background-color: $third;
-      border-radius: 7px;
+      border-radius: $b-radius;
       flex: 0 0 calc((100% - 25px) / 3);
     }
   }
@@ -415,7 +417,7 @@ button {
     text-decoration: none;
     color: $third;
     box-shadow: 0 0 20px #eee;
-    border-radius: 7px;
+    border-radius: $b-radius;
     display: block;
   }
 
@@ -480,7 +482,7 @@ button {
   }
   &__box {
     background-color: $third;
-    border-radius: 7px;
+    border-radius: $b-radius;
     margin-bottom: $margin-bottom;
     display: block;
     gap: 10px;
@@ -549,7 +551,7 @@ button {
   }
   img {
     width: 100%;
-    border-radius: 7px;
+    border-radius: $b-radius;
   }
 
   &__item-desc {
@@ -565,6 +567,49 @@ button {
   &__online-course {
     background-color: lightgray;
   }
+  & .offer {
+    margin-bottom: 30px;
+  }
+
+  &__form-button {
+    display: flex;
+    justify-content: center;
+  }
+  &__form-field {
+    margin-bottom: 10px;
+  }
+
+  &__form-field input[type="text"],
+  &__form-field input[type="number"],
+  &__form-field input[type="email"],
+  &__form-field input[type="date"],
+  &__form-field input[type="tel"],
+  &__form-field textarea {
+    width: 100%;
+    border: 1px solid $primary;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 10px;
+  }
+  &__form {
+    border: solid 1px $primary;
+    background-color: lightgray;
+    border-radius: $b-radius;
+    margin-bottom: 30px;
+    padding: 0 20px 30px 20px;
+  }
+
+  &__form-field > label {
+    display: block;
+  }
+  .required {
+    color: red;
+  }
+
+  form {
+    width: 100%;
+    max-width: 400px;
+  }
 
   @media screen and (min-width: 800px) {
     &__box {
@@ -579,6 +624,14 @@ button {
     }
     .offer__content {
       height: 250px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 1040px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
   }
 }
