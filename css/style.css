@@ -531,10 +531,6 @@ button {
 .english .offer {
   margin-bottom: 30px;
 }
-.english__form-button {
-  display: flex;
-  justify-content: center;
-}
 .english__form-field {
   margin-bottom: 10px;
 }
@@ -544,6 +540,24 @@ button {
   border-radius: 7px;
   font-size: 16px;
   padding: 10px;
+}
+.english__form-field input[type=text]:not(:-moz-placeholder-shown):valid, .english__form-field input[type=number]:not(:-moz-placeholder-shown):valid, .english__form-field input[type=email]:not(:-moz-placeholder-shown):valid, .english__form-field input[type=tel]:not(:-moz-placeholder-shown):valid, .english__form-field textarea:not(:-moz-placeholder-shown):valid {
+  background-color: #d9e2d9;
+}
+.english__form-field input[type=text]:not(:-ms-input-placeholder):valid, .english__form-field input[type=number]:not(:-ms-input-placeholder):valid, .english__form-field input[type=email]:not(:-ms-input-placeholder):valid, .english__form-field input[type=tel]:not(:-ms-input-placeholder):valid, .english__form-field textarea:not(:-ms-input-placeholder):valid {
+  background-color: #d9e2d9;
+}
+.english__form-field input[type=text]:not(:placeholder-shown):valid, .english__form-field input[type=number]:not(:placeholder-shown):valid, .english__form-field input[type=email]:not(:placeholder-shown):valid, .english__form-field input[type=tel]:not(:placeholder-shown):valid, .english__form-field textarea:not(:placeholder-shown):valid {
+  background-color: #d9e2d9;
+}
+.english__form-field input[type=text]:not(:-moz-placeholder-shown):invalid, .english__form-field input[type=number]:not(:-moz-placeholder-shown):invalid, .english__form-field input[type=email]:not(:-moz-placeholder-shown):invalid, .english__form-field input[type=tel]:not(:-moz-placeholder-shown):invalid, .english__form-field textarea:not(:-moz-placeholder-shown):invalid {
+  background-color: #f19d96;
+}
+.english__form-field input[type=text]:not(:-ms-input-placeholder):invalid, .english__form-field input[type=number]:not(:-ms-input-placeholder):invalid, .english__form-field input[type=email]:not(:-ms-input-placeholder):invalid, .english__form-field input[type=tel]:not(:-ms-input-placeholder):invalid, .english__form-field textarea:not(:-ms-input-placeholder):invalid {
+  background-color: #f19d96;
+}
+.english__form-field input[type=text]:not(:placeholder-shown):invalid, .english__form-field input[type=number]:not(:placeholder-shown):invalid, .english__form-field input[type=email]:not(:placeholder-shown):invalid, .english__form-field input[type=tel]:not(:placeholder-shown):invalid, .english__form-field textarea:not(:placeholder-shown):invalid {
+  background-color: #f19d96;
 }
 .english__form {
   border: solid 1px #0d47a1;
@@ -561,6 +575,31 @@ button {
 .english form {
   width: 100%;
   max-width: 400px;
+}
+.english__form-button {
+  background-image: linear-gradient(to right, #56ccf2 0%, #2f80ed 51%, #56ccf2 100%);
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background-size: 200% auto;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 7px;
+  display: block;
+  height: 40px;
+}
+.english__form-button button.button {
+  color: white;
+  margin: 0;
+  cursor: pointer;
+}
+.english__form-button:hover {
+  background-position: right center;
+  color: #0d47a1;
+  text-decoration: none;
 }
 @media screen and (min-width: 800px) {
   .english__box {
