@@ -95,7 +95,8 @@ h3 {
     list-style: none;
     margin: 0;
     padding: 5px;
-    min-width: 200px;
+    min-width: 100px;
+    z-index: 99;
   }
   .header li:hover .header__submenu {
     display: block;
@@ -105,6 +106,7 @@ h3 {
   }
   .header__sublink {
     text-decoration: none;
+    color: white;
   }
 }
 .header__link {
@@ -194,7 +196,7 @@ h3 {
     list-style: none;
     margin: 0;
     padding: 5px;
-    min-width: 200px;
+    min-width: 100px;
   }
   .menu li:hover .menu__submenu {
     display: block;
@@ -204,6 +206,7 @@ h3 {
   }
   .menu__sublink {
     text-decoration: none;
+    color: white;
   }
 }
 .menu__item--active .menu__link {
@@ -621,6 +624,31 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+
+.classroom__gallery {
+  background-color: lightgray;
+}
+.classroom__box {
+  padding: 5px;
+  margin: 20px 0;
+  gap: 20px;
+  text-align: justify;
+}
+.classroom__h2 {
+  text-align: center;
+}
+.classroom__img {
+  width: 50%;
+  border-radius: 7px;
+}
+@media screen and (min-width: 800px) {
+  .classroom__box {
+    display: flex;
+  }
+  .classroom__desc, .classroom__map {
+    width: 510px;
   }
 }
 

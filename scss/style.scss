@@ -113,7 +113,8 @@ h3 {
       list-style: none;
       margin: 0;
       padding: 5px;
-      min-width: 200px;
+      min-width: 100px;
+      z-index: 99;
     }
     & li:hover &__submenu {
       display: block;
@@ -125,6 +126,7 @@ h3 {
 
     &__sublink {
       text-decoration: none;
+      color: $third;
     }
   }
 
@@ -237,7 +239,7 @@ h3 {
       list-style: none;
       margin: 0;
       padding: 5px;
-      min-width: 200px;
+      min-width: 100px;
     }
 
     & li:hover &__submenu {
@@ -250,6 +252,7 @@ h3 {
 
     &__sublink {
       text-decoration: none;
+      color: $third;
     }
   }
   &__item--active &__link {
@@ -624,7 +627,6 @@ button {
     margin-bottom: 30px;
   }
 
- 
   &__form-field {
     margin-bottom: 10px;
   }
@@ -648,7 +650,6 @@ button {
   &__form-field input[type="tel"]:not(:placeholder-shown):valid,
   &__form-field textarea:not(:placeholder-shown):valid {
     background-color: #d9e2d9;
-   
   }
 
   &__form-field input[type="text"]:not(:placeholder-shown):invalid,
@@ -657,20 +658,15 @@ button {
   &__form-field input[type="tel"]:not(:placeholder-shown):invalid,
   &__form-field textarea:not(:placeholder-shown):invalid {
     background-color: #f19d96;
-   
   }
 
   &__form {
-    
     border: solid 1px $primary;
     background-color: lightgray;
     border-radius: $b-radius;
     margin-bottom: 30px;
     padding: 0 20px 30px 20px;
-
   }
-
- 
 
   &__form-field > label {
     display: block;
@@ -684,7 +680,6 @@ button {
     max-width: 400px;
   }
 
-  
   &__form-button {
     background-image: linear-gradient(
       to right,
@@ -707,9 +702,9 @@ button {
 
     button.button {
       color: $third;
-    margin: 0;
-    
-    cursor: pointer;
+      margin: 0;
+
+      cursor: pointer;
     }
   }
 
@@ -740,6 +735,38 @@ button {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+    }
+  }
+}
+
+.classroom {
+  &__gallery {
+    background-color: lightgray;
+  }
+
+  &__box {
+    padding: 5px;
+    margin: 20px 0;
+    gap: 20px;
+    text-align: justify;
+  }
+
+  &__h2 {
+    text-align: center;
+  }
+  &__img {
+    width: 50%;
+    border-radius: $b-radius;
+  }
+
+  @media screen and (min-width: 800px) {
+    &__box {
+      display: flex;
+    }
+
+    &__desc,
+    &__map {
+      width: 510px;
     }
   }
 }
