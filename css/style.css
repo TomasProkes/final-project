@@ -682,6 +682,29 @@ button {
   }
 }
 
+.individual-course-desc {
+  padding: 0 5px;
+}
+.individual-course-desc ul {
+  padding: 0 5px;
+  font-size: 14px;
+  list-style: none;
+}
+.individual-course-desc li {
+  display: inline-block;
+}
+.individual-course-desc h2 {
+  text-align: center;
+}
+.individual-course-desc h3 {
+  padding: 0 5px;
+  display: inline;
+}
+.individual-course-desc__p {
+  padding: 0 5px;
+  text-align: justify;
+}
+
 .footer {
   background-color: #2f80ed;
   height: 250px;

@@ -63,16 +63,32 @@
                         kurzy</a>
                         <ul class="menu__submenu">
                             <li class="menu__subitem"><a href="/anglictina/" class="menu__sublink">Angličtina</a></li>
-                            <li class="menu__subitem"><a href="#" class="menu__sublink">Němčina</a></li>
-                            <li class="menu__subitem"><a href="#" class="menu__sublink">Italština</a></li>
-                            <li class="menu__subitem"><a href="#" class="menu__sublink">Španělština</a></li>
-                            <li class="menu__subitem"><a href="#" class="menu__sublink">Ruština</a></li>
+                            <li class="menu__subitem"><a href="/nemcina/" class="menu__sublink">Němčina</a></li>
+                            <li class="menu__subitem"><a href="/italstina/" class="menu__sublink">Italština</a></li>
+                            <li class="menu__subitem"><a href="/spanelstina/" class="menu__sublink">Španělština</a></li>
+                            <li class="menu__subitem"><a href="/rustina/" class="menu__sublink">Ruština</a></li>
                         </ul>
                     </li>
-                <li class="menu__item"><a href="/anglictina/" class="menu__link">Individuální kurzy</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Online kurzy</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Firemní kurzy</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Pomaturitní studium</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'individualni-kurzy' }}"><a href="/individualni-kurzy/" class="menu__link">Individuální kurzy</a>
+                    <ul class="menu__submenu">
+                        <li class="menu__subitem"><a href="/anglictina/" class="menu__sublink">Angličtina</a></li>
+                        <li class="menu__subitem"><a href="/nemcina/" class="menu__sublink">Němčina</a></li>
+                        <li class="menu__subitem"><a href="/italstina/" class="menu__sublink">Italština</a></li>
+                        <li class="menu__subitem"><a href="/spanelstina/" class="menu__sublink">Španělština</a></li>
+                        <li class="menu__subitem"><a href="/rustina/" class="menu__sublink">Ruština</a></li>
+                    </ul>                
+                </li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'online-kurzy' }}"><a href="#" class="menu__link">Online kurzy</a>
+                    <ul class="menu__submenu">
+                        <li class="menu__subitem"><a href="/anglictina/" class="menu__sublink">Angličtina</a></li>
+                        <li class="menu__subitem"><a href="/nemcina/" class="menu__sublink">Němčina</a></li>
+                        <li class="menu__subitem"><a href="/italstina/" class="menu__sublink">Italština</a></li>
+                        <li class="menu__subitem"><a href="/spanelstina/" class="menu__sublink">Španělština</a></li>
+                        <li class="menu__subitem"><a href="/rustina/" class="menu__sublink">Ruština</a></li>
+                    </ul>  
+                </li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'firemni-kurzy' }}"><a href="#" class="menu__link">Firemní kurzy</a></li>
+                <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'pomaturitni-studium' }}"><a href="#" class="menu__link">Pomaturitní studium</a></li>
                 <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'jazykove-zkousky' }}"><a href="#"
                         class="menu__link">Jazykové zkoušky</a></li>
             </ul>
@@ -91,7 +107,7 @@
                 <li class="footer__item">&copy;2021, Lekcio</li>
                 <li class="footer__item"><a href="/" class="footer__link">Úvod</a></li>
                 <li class="footer__item"><a href="/skupinove-kurzy/" class="footer__link">Skupinové kurzy</a></li>
-                <li class="footer__item"><a href="#" class="footer__link">Individuální kurzy</a></li>
+                <li class="footer__item"><a href="/individualni-kurzy/" class="footer__link">Individuální kurzy</a></li>
                 <li class="footer__item"><a href="#" class="footer__link">Firemní kurzy</a></li>
                 <li class="footer__item"><a href="#" class="footer__link">Pomaturitní studium</a></li>
                 <li class="footer__item"><a href="#" class="footer__link">Jazykové zkoušky</a></li>
