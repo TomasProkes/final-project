@@ -638,10 +638,28 @@ button {
 }
 .classroom__h2 {
   text-align: center;
+  padding-top: 30px;
+}
+.classroom__h3 {
+  padding: 0 5px;
+  display: inline;
+  margin-left: 30px;
 }
 .classroom__img {
-  width: 50%;
+  width: 80%;
   border-radius: 7px;
+  margin: 30px;
+}
+.classroom img {
+  border-radius: 7px;
+}
+.classroom__p-adress {
+  font-size: 18px;
+  font-weight: bold;
+}
+.classroom__content-p {
+  text-align: justify;
+  padding: 0 20px;
 }
 @media screen and (min-width: 800px) {
   .classroom__box {
@@ -649,6 +667,18 @@ button {
   }
   .classroom__desc, .classroom__map {
     width: 510px;
+  }
+  .classroom__content {
+    display: flex;
+    flex-basis: 50%;
+  }
+  .classroom__img {
+    width: 40%;
+  }
+  .classroom__content-p {
+    margin-left: 30px;
+    padding: 0 20px 0 0;
+    align-self: center;
   }
 }
 

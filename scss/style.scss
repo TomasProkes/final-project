@@ -742,6 +742,7 @@ button {
 .classroom {
   &__gallery {
     background-color: lightgray;
+  
   }
 
   &__box {
@@ -753,10 +754,34 @@ button {
 
   &__h2 {
     text-align: center;
+   padding-top: 30px;
+ 
   }
+
+  &__h3 {
+    padding: 0 5px;
+    display: inline;
+    margin-left: 30px;
+  }
+
   &__img {
-    width: 50%;
+    width: 80%;
     border-radius: $b-radius;
+    
+    margin: 30px;
+  }
+
+  img {
+    border-radius: $b-radius;
+  }
+
+  &__p-adress {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &__content-p {
+    text-align: justify;
+    padding: 0 20px;
   }
 
   @media screen and (min-width: 800px) {
@@ -768,6 +793,23 @@ button {
     &__map {
       width: 510px;
     }
+
+    &__content {
+      display: flex;
+      flex-basis: 50%;
+    
+    }
+
+    &__img {
+      width: 40%;
+     
+    }
+    &__content-p {
+  margin-left: 30px;
+  padding: 0 20px 0 0;
+  align-self: center;
+    }
+
   }
 }
 
