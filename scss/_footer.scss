@@ -1,0 +1,50 @@
+@use "variables";
+
+.footer {
+  background-color: variables.$secondary;
+  height: 250px;
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    color: variables.$third;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  @media screen and (min-width: 800px) {
+    height: 60px;
+    &__links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 16px;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 80px;
+      line-height: 15px;
+      text-align: center;
+      color: variables.$third;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+  a {
+    color: variables.$third;
+  }
+
+  & a:hover,
+  & a:focus {
+    color: variables.$primary;
+  }
+}

@@ -1,0 +1,57 @@
+@use "variables";
+
+.language {
+  background-color: lightgray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: variables.$margin-bottom;
+
+  &__text {
+    color: variables.$primary;
+    font-size: 20px;
+  }
+
+  &__content {
+    text-align: center;
+
+    flex-direction: column;
+    display: flex;
+    text-decoration: none;
+  }
+  &__box {
+    background-color: variables.$third;
+    border-radius: variables.$b-radius;
+    margin-bottom: variables.$margin-bottom;
+    display: block;
+    gap: 10px;
+
+    flex-direction: column;
+    flex: 0 0 calc(100% - 25px);
+  }
+
+  @media screen and (min-width: 800px) {
+    text-align: center;
+    background-color: lightgray;
+
+    padding-top: 20px;
+
+    &__content {
+      display: flex;
+
+      text-align: center;
+    }
+    &__box {
+      margin-right: 10px;
+      flex: 0 0 calc((100% - 25px) / 4);
+    }
+    &__icon {
+      width: 20%;
+    }
+  }
+
+  &__icon {
+    align-self: center;
+    margin-top: 8px;
+  }
+}

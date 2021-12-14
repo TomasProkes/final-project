@@ -1,0 +1,167 @@
+@use "variables";
+
+.english {
+  padding: 0 5px;
+
+  &__list {
+    padding: 0 5px;
+    font-size: 14px;
+    list-style: none;
+  }
+
+  &__box &__item {
+    display: block;
+  }
+  &__item {
+    display: inline-block;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  &__h3-online {
+    padding: 0 5px;
+    display: inline;
+  }
+
+  &__p {
+    padding: 0 5px;
+    text-align: justify;
+  }
+  &__box {
+    margin-bottom: 40px;
+  }
+  img {
+    width: 100%;
+    border-radius: variables.$b-radius;
+  }
+
+  &__item-desc {
+    text-align: justify;
+  }
+  &__h2 {
+    display: block;
+    text-align: center;
+    margin-bottom: variables.$margin-bottom;
+    background-color: transparent;
+    color: variables.$primary;
+  }
+  &__online-course {
+    background-color: lightgray;
+  }
+  & .offer {
+    margin-bottom: 30px;
+  }
+
+  &__form-field {
+    margin-bottom: 10px;
+  }
+
+  &__form-field input[type="text"],
+  &__form-field input[type="number"],
+  &__form-field input[type="email"],
+  &__form-field input[type="date"],
+  &__form-field input[type="tel"],
+  &__form-field textarea {
+    width: 100%;
+    border: 1px solid variables.$primary;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  &__form-field input[type="text"]:not(:placeholder-shown):valid,
+  &__form-field input[type="number"]:not(:placeholder-shown):valid,
+  &__form-field input[type="email"]:not(:placeholder-shown):valid,
+  &__form-field input[type="tel"]:not(:placeholder-shown):valid,
+  &__form-field textarea:not(:placeholder-shown):valid {
+    background-color: #d9e2d9;
+  }
+
+  &__form-field input[type="text"]:not(:placeholder-shown):invalid,
+  &__form-field input[type="number"]:not(:placeholder-shown):invalid,
+  &__form-field input[type="email"]:not(:placeholder-shown):invalid,
+  &__form-field input[type="tel"]:not(:placeholder-shown):invalid,
+  &__form-field textarea:not(:placeholder-shown):invalid {
+    background-color: #f19d96;
+  }
+
+  &__form {
+    border: solid 1px variables.$primary;
+    background-color: lightgray;
+    border-radius: variables.$b-radius;
+    margin-bottom: 30px;
+    padding: 0 20px 30px 20px;
+  }
+
+  &__form-field > label {
+    display: block;
+  }
+  .required {
+    color: red;
+  }
+
+  form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__form-button {
+    background-image: linear-gradient(
+      to right,
+      #56ccf2 0%,
+      #2f80ed 51%,
+      #56ccf2 100%
+    );
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-decoration: none;
+    color: variables.$third;
+    box-shadow: 0 0 20px #eee;
+    border-radius: variables.$b-radius;
+    display: block;
+    height: 40px;
+
+    button.button {
+      color: variables.$third;
+      margin: 0;
+
+      cursor: pointer;
+    }
+  }
+
+  &__form-button:hover {
+    background-position: right center;
+    color: variables.$primary;
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: 800px) {
+    &__box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1;
+      gap: 20px;
+    }
+    .offer__box {
+      flex: 0 0 calc((100% - 30px) / 3);
+      margin-bottom: 0;
+    }
+    .offer__content {
+      height: 250px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 1040px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}

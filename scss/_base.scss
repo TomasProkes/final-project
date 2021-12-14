@@ -1,0 +1,55 @@
+@use "variables";
+
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 20px;
+  font-family: variables.$font-main-text;
+  font-size: 16px;
+  background-color: #f5f3f4;
+
+  @media screen and (min-width: 800px) {
+    width: 1040px;
+    margin: 20px auto;
+  }
+}
+
+h2 {
+  color: variables.$primary;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0;
+  background-color: variables.$primary;
+  color: variables.$third;
+  border-radius: variables.$b-radius;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid black;
+  padding: 10px 20px;
+}
+
+table {
+  margin-top: variables.$margin-bottom;
+  margin-bottom: variables.$margin-bottom;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.lorem__h3 {
+  padding: 0 5px;
+  display: inline;
+}

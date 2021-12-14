@@ -1,0 +1,112 @@
+@use "variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  &__logo {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 800px) {
+    &__logo {
+      display: flex;
+      margin: 0;
+    }
+  }
+
+  &__svg-book {
+    max-width: 100%;
+  }
+
+  &__h1 {
+    margin: 0;
+    color: variables.$primary;
+    font-size: 2.5em;
+    height: 60px;
+  }
+
+  &__h2 {
+    margin: 0;
+    color: variables.$secondary;
+    font-size: 16px;
+  }
+  &__title {
+    margin-left: 10px;
+  }
+  &__right-menu {
+    display: none;
+  }
+
+  @media screen and (min-width: 800px) {
+    &__right-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 300px;
+      justify-content: space-between;
+    }
+
+    &__item {
+      flex: 1 1 auto;
+    }
+
+    & li {
+      position: relative;
+    }
+
+    &__submenu {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: #56ccf2;
+      border-radius: variables.$b-radius;
+      list-style: none;
+      margin: 0;
+      padding: 5px;
+      min-width: 100px;
+      z-index: 99;
+    }
+    & li:hover &__submenu {
+      display: block;
+    }
+
+    &__subitem:hover {
+      background-color: #2f80ed;
+    }
+
+    &__sublink {
+      text-decoration: none;
+      color: variables.$third;
+    }
+  }
+
+  &__link {
+    background-image: linear-gradient(
+      to right,
+      #56ccf2 0%,
+      #0d47a1 25%,
+      #56ccf2 100%
+    );
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-decoration: none;
+    color: variables.$third;
+    box-shadow: 0 0 20px #eee;
+    border-radius: variables.$b-radius;
+    display: block;
+  }
+  &__link:hover {
+    background-position: right center;
+    color: variables.$primary;
+    text-decoration: none;
+  }
+}

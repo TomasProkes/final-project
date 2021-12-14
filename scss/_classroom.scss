@@ -1,0 +1,70 @@
+@use "variables";
+
+.classroom {
+  &__gallery {
+    background-color: lightgray;
+  }
+
+  &__box {
+    padding: 5px;
+    margin: 20px 0;
+    gap: 20px;
+    text-align: justify;
+  }
+
+  &__h2 {
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  &__h3 {
+    padding: 0 5px;
+    display: inline;
+    margin-left: 30px;
+  }
+
+  &__img {
+    width: 80%;
+    border-radius: variables.$b-radius;
+
+    margin: 30px;
+  }
+
+  img {
+    border-radius: variables.$b-radius;
+  }
+
+  &__p-adress {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  &__content-p {
+    text-align: justify;
+    padding: 0 20px;
+  }
+
+  @media screen and (min-width: 800px) {
+    &__box {
+      display: flex;
+    }
+
+    &__desc,
+    &__map {
+      width: 510px;
+    }
+
+    &__content {
+      display: flex;
+      flex-basis: 50%;
+    }
+
+    &__img {
+      width: 40%;
+    }
+    &__content-p {
+      margin-left: 30px;
+      padding: 0 20px 0 0;
+      align-self: center;
+    }
+  }
+}

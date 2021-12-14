@@ -1,0 +1,12 @@
+@use "variables";
+
+.upper__image {
+  @media screen and (min-width: 800px) {
+    min-height: 185px;
+    background: url(../images/never-stop-learning.jpg) no-repeat right
+      center/cover;
+    border-radius: variables.$b-radius;
+    margin: 5px;
+    margin-bottom: variables.$margin-bottom;
+  }
+}

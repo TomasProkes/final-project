@@ -1,0 +1,113 @@
+@use "variables";
+
+.menu {
+  &__checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+  &__toggler {
+    border: solid 1px variables.$primary;
+    color: variables.$primary;
+    padding: 2px;
+    border-radius: variables.$b-radius;
+  }
+
+  &__list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    background-image: linear-gradient(
+      to right,
+      #56ccf2 0%,
+      #2f80ed 51%,
+      #56ccf2 100%
+    );
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-decoration: none;
+    color: variables.$third;
+    box-shadow: 0 0 20px #eee;
+    border-radius: variables.$b-radius;
+    display: block;
+  }
+
+  &__link:hover {
+    background-position: right center;
+    color: variables.$primary;
+    text-decoration: none;
+  }
+
+  &__checkbox:checked ~ &__list {
+    display: block;
+  }
+
+  &__submenu {
+    display: none;
+  }
+
+  @media screen and (min-width: 800px) {
+    &__toggler {
+      display: none;
+    }
+
+    &__list {
+      display: flex !important;
+      list-style: none;
+
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__item {
+      flex: 1 0 auto;
+    }
+
+    & li {
+      position: relative;
+    }
+
+    &__submenu {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      background-color: #56ccf2;
+      border-radius: variables.$b-radius;
+      list-style: none;
+      margin: 0;
+      padding: 5px;
+      min-width: 100px;
+    }
+
+    & li:hover &__submenu {
+      display: block;
+    }
+
+    &__subitem:hover {
+      background-color: #2f80ed;
+    }
+
+    &__sublink {
+      text-decoration: none;
+      color: variables.$third;
+    }
+  }
+  &__item--active &__link {
+    background-image: none;
+    background-color: variables.$primary;
+    color: variables.$secondary;
+  }
+
+  &__item--active &__link:hover {
+    color: variables.$third;
+  }
+}

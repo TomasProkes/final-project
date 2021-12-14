@@ -1,0 +1,84 @@
+@use "variables";
+
+.offer-spec {
+  background-color: lightgray;
+  padding-bottom: variables.$margin-bottom;
+
+  & h2 {
+    text-align: center;
+  }
+  &__content {
+    text-align: center;
+    margin-bottom: variables.$margin-bottom;
+  }
+  &__box {
+    background-color: variables.$third;
+    border-radius: variables.$b-radius;
+    margin-bottom: variables.$margin-bottom;
+  }
+
+  @media screen and (min-width: 800px) {
+    text-align: center;
+    background-color: lightgray;
+    padding-bottom: variables.$margin-bottom;
+    padding-top: 5px;
+
+    &__content {
+      display: flex;
+      text-align: center;
+      margin: 0 0 variables.$margin-bottom 5px;
+    }
+    &__box {
+      display: flex;
+      gap: 10px;
+      margin-right: 10px;
+      flex-direction: column;
+      background-color: variables.$third;
+      border-radius: variables.$b-radius;
+      flex: 0 0 calc((100% - 25px) / 3);
+    }
+  }
+
+  &__link-upper {
+    color: variables.$third;
+    text-decoration: none;
+    &:hover {
+      color: variables.$secondary;
+    }
+  }
+
+  & p {
+    padding: 5px;
+    margin: 0;
+  }
+
+  &__button {
+    background-image: linear-gradient(
+      to right,
+      #56ccf2 0%,
+      #2f80ed 51%,
+      #56ccf2 100%
+    );
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    text-decoration: none;
+    color: variables.$third;
+    box-shadow: 0 0 20px #eee;
+    border-radius: variables.$b-radius;
+    display: block;
+  }
+
+  &__button:hover {
+    background-position: right center;
+    color: variables.$primary;
+    text-decoration: none;
+  }
+  &__icon {
+    width: 20%;
+    align-self: center;
+    margin-top: 8px;
+  }
+}
