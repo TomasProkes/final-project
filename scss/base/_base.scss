@@ -1,0 +1,35 @@
+@use 'variables';
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  ::before,
+  ::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 20px;
+    font-family: $font-main-text;
+    font-size: 16px;
+    background-color: #f5f3f4;
+  
+    @media screen and (min-width: 800px) {
+      width: 1040px;
+      margin: 20px auto;
+    }
+  }
+  
+  h2 {
+    color: $primary;
+    font-size: 30px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin: 0;
+    background-color: $primary;
+    color: $third;
+    border-radius: $b-radius;
+  }

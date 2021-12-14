@@ -1,0 +1,45 @@
+<nav class="menu">
+
+    <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+    <label for="menu-checkbox" class="menu__toggler">☰</label>
+
+    <ul class="menu__list">
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === '' }}"><a href="/"
+                class="menu__link">Úvod</a></li>
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'skupinove-kurzy' }}"><a
+                href="/skupinove-kurzy/" class="menu__link">Skupinové
+                kurzy</a>
+            <ul class="menu__submenu">
+                <li class="menu__subitem"><a href="/skupinove-kurzy/anglictina/" class="menu__sublink">Angličtina</a>
+                </li>
+                <li class="menu__subitem"><a href="/skupinove-kurzy/nemcina/" class="menu__sublink">Němčina</a></li>
+                <li class="menu__subitem"><a href="/skupinove-kurzy/italstina/" class="menu__sublink">Italština</a></li>
+                <li class="menu__subitem"><a href="/skupinove-kurzy/spanelstina/" class="menu__sublink">Španělština</a>
+                </li>
+                <li class="menu__subitem"><a href="/skupinove-kurzy/rustina/" class="menu__sublink">Ruština</a></li>
+            </ul>
+        </li>
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'individualni-kurzy' }}"><a
+                href="/individualni-kurzy/" class="menu__link">Individuální kurzy</a>
+
+        </li>
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'online-kurzy' }}"><a href="#"
+                class="menu__link">Online kurzy</a>
+            <ul class="menu__submenu">
+                <li class="menu__subitem"><a href="/skupinove-kurzy/anglictina/" class="menu__sublink">Angličtina</a>
+                </li>
+                <li class="menu__subitem"><a href="/skupinove-kurzy/nemcina/" class="menu__sublink">Němčina</a></li>
+                <li class="menu__subitem"><a href="/skupinove-kurzy/italstina/" class="menu__sublink">Italština</a></li>
+                <li class="menu__subitem"><a href="/skupinove-kurzy/spanelstina/" class="menu__sublink">Španělština</a>
+                </li>
+                <li class="menu__subitem"><a href="/skupinove-kurzy/rustina/" class="menu__sublink">Ruština</a></li>
+            </ul>
+        </li>
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'firemni-kurzy' }}"><a href="#"
+                class="menu__link">Firemní kurzy</a></li>
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'pomaturitni-studium' }}"><a href="#"
+                class="menu__link">Pomaturitní studium</a></li>
+        <li class="menu__item {{ 'menu__item--active' if page.fileSlug === 'jazykove-zkousky' }}"><a href="#"
+                class="menu__link">Jazykové zkoušky</a></li>
+    </ul>
+</nav>

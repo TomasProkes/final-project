@@ -1,0 +1,9 @@
+button {
+    background-color: transparent;
+    border: none;
+    margin: 10px;
+  
+    @media screen and (min-width: 800px) {
+      margin: 30px 10px 10px 10px;
+    }
+  }

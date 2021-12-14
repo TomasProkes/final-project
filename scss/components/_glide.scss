@@ -1,0 +1,57 @@
+@use 'variables';
+
+.glide {
+    &__next-to {
+      text-align: center;
+    }
+  
+    &__section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: $margin-bottom;
+    }
+    &__right {
+      width: 515px;
+    }
+  
+    @media screen and (min-width: 800px) {
+      &__section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1;
+        margin-bottom: $margin-bottom;
+      }
+  
+      &__next-to {
+        width: 510px;
+        padding: 0 0 0 10px;
+        align-self: center;
+      }
+      &__right {
+        width: 515px;
+      }
+    }
+  
+    &__slide img {
+      width: 100%;
+      border-radius: $b-radius;
+    }
+  
+    &__slide {
+      position: relative;
+    }
+  
+    &__desc {
+      position: absolute;
+      left: 10%;
+      bottom: 5%;
+      right: 10%;
+      color: $third;
+      font-size: 28px;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 10px;
+      text-align: center;
+    }
+  }
+  
